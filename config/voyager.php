@@ -163,7 +163,7 @@ return [
 
         'widgets' => [
             'TCG\\Voyager\\Widgets\\UserDimmer',
-            'TCG\\Voyager\\Widgets\\PostDimmer',
+            'App\\Widgets\\Pedidos',
             'App\\Widgets\\Comidas',
         ],
 

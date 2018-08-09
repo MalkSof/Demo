@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 
 namespace App\Widgets;
 
@@ -6,9 +7,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Widgets\BaseDimmer;
-use App\Comida;
+use App\Pedido;
 
-class Comidas extends BaseDimmer
+class Pedidos extends BaseDimmer
 {
     /**
      * The configuration array.
@@ -23,18 +24,18 @@ class Comidas extends BaseDimmer
      */
     public function run()
     {
-        $count = Comida::count();
+        $count = Pedido::count();
         $string = trans_choice('voyager::dimmer.page', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-hotdog',
-            'title'  => "{$count} Comidas",
-            'text'   => 'Haga clic para ver, editar, agregar y eliminar las comidas. Importante poner Berajot a las comidas',
+            'icon'   => 'voyager-bag',
+            'title'  => "{$count} Pedidos",
+            'text'   => 'Haga clic para ver, editar, agregar y eliminar los Pedidos.',
             'button' => [
-                'text' => 'Comidas',
-                'link' => route('voyager.comidas.index'),
+                'text' => 'Pedidos',
+                'link' => route('voyager.pedidos.index'),
             ],
-            'image' => voyager_asset('images/widget-backgrounds/comida.png'),
+            'image' => voyager_asset('images/widget-backgrounds/pedidos.jpg'),
         ]));
     }
 

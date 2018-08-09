@@ -27,7 +27,7 @@
       
       <th scope="col">Nombre</th>
       <th scope="col">Precio</th>
-      <th scope="col">Beraja</th>
+      
       <th scope="col">Cant.</th>
       <th scope="col"></th>
     </tr>
@@ -39,7 +39,7 @@
       
       <td>{{$item->model->nombre}}</td>
       <td>${{$item->model->precio}}</td>
-      <td>{{  beraja($item->model->beraja_id) }}</td>
+      
       <td>{{$item->qty}}</td>
 
 

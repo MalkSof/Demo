@@ -142,8 +142,8 @@ use Illuminate\Support\Facades\DB;
                                           
                                          
                                           <div class="form-check">
-                                            <input type="checkbox" name="ingrediente[]" value="{{ $ingrediente->ingrediente_id }}">
-                                          <label class="form-check-label" for="defaultCheck1">
+                                            <input type="checkbox" name="ingrediente[]" value="{{ $ingrediente->ingrediente_id }}" id="{{ $ingrediente->ingrediente_id }}">
+                                          <label class="form-check-label" for="{{ $ingrediente->ingrediente_id }}">
                                             {{ $ingrediente->nombre }} 
                                           </label>
                                           </div>
