@@ -114,6 +114,28 @@ class CheckoutController extends Controller
         session()->forget('cupon');
         return view('gracias');
     }
+ /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function envio(Request $request)
+    { 
+        echo $request->entrega;
+        
+         $descuento = session()->get('cupon')['descuento'] ?? 0;
+        $newtotal = (Cart::subtotal() - $descuento);
+        return view('checkout')->with([
+            'descuento' =>$descuento,
+            'newtotal' => $newtotal,
+            'entrega' => $request->entrega,
+
+
+        ]);
+        
+        return view('gracias');
+    }
 
     /**
      * Display the specified resource.
