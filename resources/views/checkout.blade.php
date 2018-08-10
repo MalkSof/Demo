@@ -81,56 +81,54 @@
   -->
                  <fieldset>
                 <!-- Address form -->
-         
-                <h2>Address</h2>
+
+                
+
+<?php 
+                if ($entrega == "envio") { ?>
+                
+                  <h2>Envio</h2>
          
                 <!-- full-name input-->
               
                 <!-- address-line1 input-->
-                <div class="control-group">
-                    <label class="control-label">Address Line 1</label>
+                <div class="form-group">
+                    <label class="form-group">Direccion</label>
                     <div class="controls">
-                        <input id="address-line1" name="address-line1" type="text" placeholder="address line 1"
-                        class="input-xlarge">
-                        <p class="help-block">Street address, P.O. box, company name, c/o</p>
+                        <input id="address-line1" name="address-line1" type="text" placeholder="Direccion"
+                        class="form-control">
+                        <p class="help-block">Lugar donde quieren que le entreguen la comida</p>
                     </div>
                 </div>
                 <!-- address-line2 input-->
-                <div class="control-group">
-                    <label class="control-label">Address Line 2</label>
-                    <div class="controls">
-                        <input id="address-line2" name="address-line2" type="text" placeholder="address line 2"
-                        class="input-xlarge">
-                        <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
-                    </div>
-                </div>
+                
                 <!-- city input-->
-                <div class="control-group">
-                    <label class="control-label">City / Town</label>
+                <div class="form-group">
+                    <label class="control-label">Cuidad/ Municipio</label>
                     <div class="controls">
-                        <input id="city" name="city" type="text" placeholder="city" class="input-xlarge">
+                        <input id="city" name="city" type="text" placeholder="Cuidad" class="form-control">
                         <p class="help-block"></p>
                     </div>
                 </div>
-                <!-- region input-->
-                <div class="control-group">
-                    <label class="control-label">State / Province / Region</label>
-                    <div class="controls">
-                        <input id="region" name="region" type="text" placeholder="state / province / region"
-                        class="input-xlarge">
-                        <p class="help-block"></p>
-                    </div>
-                </div>
+               
+                
                 <!-- postal-code input-->
-                <div class="control-group">
-                    <label class="control-label">Zip / Postal Code</label>
+                <div class="form-group">
+                    <label class="control-label">Codigo Postal</label>
                     <div class="controls">
-                        <input id="postal-code" name="postal-code" type="text" placeholder="zip or postal code"
-                        class="input-xlarge">
+                        <input id="postal-code" name="postal-code" type="text" placeholder="Codigo Postal"
+                        class="form-control">
                         <p class="help-block"></p>
                     </div>
                 </div>
-</div>
+
+                
+                <?php
+                }
+
+
+
+                ?>
   <h4>Reservar Mesa Para:</h4>
  <div class="form-group">
    
