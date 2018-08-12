@@ -33,7 +33,7 @@
       <form method="POST" autocomplete="on" action="{{route('checkout.store')}}">
  	{{ csrf_field()}}
    <input type="hidden" value="{{$newtotal}}" name="total">
-
+   <input type="hidden" name="entrega" value="{{ $entrega }}">
 
    
 <!--<h3>Entrega</h3>
@@ -95,7 +95,7 @@
                 <div class="form-group">
                     <label class="form-group">Direccion</label>
                     <div class="controls">
-                        <input id="address-line1" name="address-line1" type="text" placeholder="Direccion"
+                        <input id="address-line1" name="addressline1" type="text" placeholder="Direccion"
                         class="form-control">
                         <p class="help-block">Lugar donde quieren que le entreguen la comida</p>
                     </div>
@@ -116,7 +116,7 @@
                 <div class="form-group">
                     <label class="control-label">Codigo Postal</label>
                     <div class="controls">
-                        <input id="postal-code" name="postal-code" type="text" placeholder="Codigo Postal"
+                        <input id="postal" name="postal-code" type="text" placeholder="Codigo Postal"
                         class="form-control">
                         <p class="help-block"></p>
                     </div>
@@ -129,6 +129,12 @@
 
 
                 ?>
+
+        <h4>Horario:</h4>
+        <div class="form-group">
+                  <input id="address-line1" name="hora" type="time" placeholder="Direccion"
+                        class="form-control" required="true">
+                </div>
   <h4>Reservar Mesa Para:</h4>
  <div class="form-group">
    

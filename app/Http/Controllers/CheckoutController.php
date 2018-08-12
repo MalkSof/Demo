@@ -76,14 +76,21 @@ class CheckoutController extends Controller
         }
 
         $fecha = session()->get('fecha');
-           
-
+           $horario = date('H:i', strtotime($request->hora));
+        $direccion = $request->addressline1 ?? "";
+        $city = $request->city ?? "";
+        $postal = $request->postal ?? 0; 
         $pedido = Pedido::create([
             'user_id' => Auth::user()->id,
             'pago' => '',
             'total' => $request->total,
             'fecha' => $fecha,
-            'mesa' =>  (int)$request->mesa
+            'mesa' =>  (int)$request->mesa,
+            'direccion' => $direccion,
+            'cuidad' => $city,
+            'postal' => $postal,
+            'entrega' => $request->entrega,
+            'hora' =>  $horario,
         ]);
         foreach (Cart::content() as  $item) {
             # code...
