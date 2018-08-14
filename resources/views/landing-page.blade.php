@@ -16,43 +16,16 @@ use Illuminate\Support\Facades\DB;
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
      
-
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.css.map') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css.map') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-grid.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-grid.css.map') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-grid.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-grid.min.css.map') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-reebot.min.css.map') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-reebot.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-reebot.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-reebot.min.css.map') }}">
-        <link rel="stylesheet" href="{{ asset('sass/responsive.css') }}">
-
-        <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.js.map') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.min.js.map') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.js.map') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.min.js.min') }}"></script>
-
+        
 
 
 
     </head>
     <body>
 
-<script src="{{asset('components/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
 
-        
-            
-  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <link rel="stylesheet" href="{{ asset('sass/responsive.css') }}">
+
+
   @include('partials.nav')</a>
 
 
