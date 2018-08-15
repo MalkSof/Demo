@@ -30,7 +30,7 @@
 
   <div class="row">
     <div class="col-sm">
-      <form method="POST" autocomplete="on" action="{{route('checkout.store')}}">
+      <form method="post" autocomplete="on" action="{{route('checkout.store')}}">
  	{{ csrf_field()}}
    <input type="hidden" value="{{$newtotal}}" name="total">
    <input type="hidden" name="entrega" value="{{ $entrega }}">

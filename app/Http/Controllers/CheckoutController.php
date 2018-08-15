@@ -38,17 +38,11 @@ class CheckoutController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $descuento = session()->get('cupon')['descuento'] ?? 0;
-        $newtotal = (Cart::subtotal() - $descuento);
-        return view('checkout')->with([
-            'descuento' =>$descuento,
-            'newtotal' => $newtotal,
+       
 
-
-        ]);
     }
 
     /**
@@ -74,6 +68,9 @@ class CheckoutController extends Controller
             # code...
             return back()->withErrors('Perdon. No tenemos disponibilidad de algunas cosas que pedis');
         }
+        $id = Auth::id();
+        echo $id;
+        exit();
 
         $fecha = session()->get('fecha');
            $horario = date('H:i', strtotime($request->hora));
@@ -129,19 +126,10 @@ class CheckoutController extends Controller
      */
     public function envio(Request $request)
     { 
-        echo $request->entrega;
         
-         $descuento = session()->get('cupon')['descuento'] ?? 0;
-        $newtotal = (Cart::subtotal() - $descuento);
-        return view('checkout')->with([
-            'descuento' =>$descuento,
-            'newtotal' => $newtotal,
-            'entrega' => $request->entrega,
-
-
-        ]);
         
-        return view('gracias');
+        
+        
     }
 
     /**

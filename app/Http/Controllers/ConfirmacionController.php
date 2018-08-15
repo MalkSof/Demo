@@ -25,6 +25,14 @@ class ConfirmacionController extends Controller
     public function index(Request $request)
     {
         //
+         $descuento = session()->get('cupon')['descuento'] ?? 0;
+        $newtotal = (Cart::subtotal() - $descuento);
+        return view('checkout')->with([
+            'descuento' =>$descuento,
+            'newtotal' => $newtotal,
+            'entrega' =>  $request->entrega
+
+        ]);
       
     }
 
@@ -49,7 +57,14 @@ class ConfirmacionController extends Controller
     public function store(Request $request)
     {
         //
-           
+            $descuento = session()->get('cupon')['descuento'] ?? 0;
+        $newtotal = (Cart::subtotal() - $descuento);
+        return view('checkout')->with([
+            'descuento' =>$descuento,
+            'newtotal' => $newtotal,
+            'entrega' =>  $request->entrega
+
+        ]);
     }
 
     /**

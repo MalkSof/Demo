@@ -57,9 +57,10 @@
 <a href="{{route('landing-page')}}" type="button" class="btn btn-primary">Continuar Comprando</a>
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <form action="{{route('checkout.envio')}}" method="post" >
-      <h1 class="display-4">{{Cart::total()}}</h1>
+    <form method="post" action="{{route('confirmacion.store')}}"  >
       {{ csrf_field()}}
+      <h1 class="display-4">{{Cart::total()}}</h1>
+      
       <div class="form-group">
     <label for="exampleFormControlSelect1">Opciones de Entrega</label>
     <select name="entrega" class="form-control" id="exampleFormControlSelect1">

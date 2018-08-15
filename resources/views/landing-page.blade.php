@@ -29,16 +29,35 @@ use Illuminate\Support\Facades\DB;
   @include('partials.nav')</a>
 
 
-            <div class="jumbotron">
-                <div >
-                  
-                    <h1>Aieka</h1>
-                    <p>Aieka pedidos es la nueva aplicación que te ayudara a que puedas reservar tu almuerzo, asi no te demoras</p>
-                    
-                </div> <!-- end hero-copy -->
-
-               <!-- end hero-image -->
-            </div> <!-- end hero -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100"  src="https://res.cloudinary.com/elem/image/upload/c_crop,h_557/v1534287974/desktopwallpapers.org.ua-7377_rjavvz.jpg" alt="First slide">
+       <div class="carousel-caption d-none d-md-block">
+      <h5>Sistema de Reserva de comida</h5>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100"   src="https://res.cloudinary.com/elem/image/upload/c_crop,h_398,w_1366/v1534288833/comida-rapida-casera_kd8o2h.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://res.cloudinary.com/elem/image/upload/c_crop,h_398,w_1366/v1534291221/recetas-de-comida-_C3_A1rabe-libanesa_nr20qb.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
         
 
         
