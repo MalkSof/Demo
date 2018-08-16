@@ -6,18 +6,14 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b634641f3742d0012c886fa&product=inline-follow-buttons"></script>
 
+
+<br>
+<br>
+<br>
 <div class="sharethis-inline-follow-buttons"></div>
 
 
 <div class="jumbotron">
-  <h1 class="display-4">Berajot</h1>
-  <p class="lead">los Sabios dispusieron que "uno no puede tener placeres en este mundo sin recitar una bendición previa". Recitar una bendición antes de comer equivale a "pedir permiso" a Di-s, reconociendo que "el mundo, y todo lo que hay en él es de Di-s" (Salmos 24:1) y Di-s es la verdadera fuente de todas las bondades de la vida.</p>
-  <hr class="my-4">
-  <h4>Hamotzi.</h4>
-  <p>Baruj ata A-do-nai, Elo-hei-nu Melej HaOlam Hamotzi lejem min haaretz</p>
-  <h4>Mezonot.</h4>
-  <p>Baruj ata A-do-nai, Elo-hei-nu Melej HaOlam bore minei mezonot</p>
-   <h4>Haetz</h4>
-  <p>Baruj ata A-do-nai, Elo-hei-nu Melej HaOlam bore pri haetz</p>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Ver Mas</a>
+  <h1 class="display-4">Gracias</h1>
+
 </div>

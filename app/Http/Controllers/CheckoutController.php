@@ -38,10 +38,18 @@ class CheckoutController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
+        
         //
-       
+          $descuento = session()->get('cupon')['descuento'] ?? 0;
+        $newtotal = (Cart::subtotal() - $descuento);
+        return view('checkout')->with([
+            'descuento' =>$descuento,
+            'newtotal' => $newtotal,
+            
+
+        ]);
 
     }
 
@@ -69,8 +77,14 @@ class CheckoutController extends Controller
             return back()->withErrors('Perdon. No tenemos disponibilidad de algunas cosas que pedis');
         }
         $id = Auth::id();
-        echo $id;
-        exit();
+       if ($request->retiro == 1) {
+           # code...
+        $ret = "Local";
+       }
+       else
+       {
+        $ret = "Domicilio";
+       }
 
         $fecha = session()->get('fecha');
            $horario = date('H:i', strtotime($request->hora));
@@ -86,7 +100,7 @@ class CheckoutController extends Controller
             'direccion' => $direccion,
             'cuidad' => $city,
             'postal' => $postal,
-            'entrega' => $request->entrega,
+            'entrega' => $ret,
             'hora' =>  $horario,
         ]);
         foreach (Cart::content() as  $item) {
@@ -112,7 +126,7 @@ class CheckoutController extends Controller
 
 
         }
-        Mail::send(new PedidoHecho($pedido));
+        
         $this->disminuirCantidad();
           Cart::destroy();
         session()->forget('cupon');

@@ -33,19 +33,19 @@
       <form method="post" autocomplete="on" action="{{route('checkout.store')}}">
  	{{ csrf_field()}}
    <input type="hidden" value="{{$newtotal}}" name="total">
-   <input type="hidden" name="entrega" value="{{ $entrega }}">
+ 
 
    
-<!--<h3>Entrega</h3>
+<h3>Entrega</h3>
 
 <div id="myRadioGroup" >
 <div class="form-check form-check-inline">
   <input checked="checked" class="form-check-input" type="radio" name="retiro" id="inlineRadio1" value="1">
-  <label class="form-check-label" for="inlineRadio1">Retiro en Aieka</label>
+  <label class="form-check-label" for="inlineRadio1">Retiro</label>
 </div>
 <div class="form-check form-check-inline">
   <input  class="form-check-input" type="radio" name="retiro" id="inlineRadio2" value="2">
-  <label class="form-check-label" for="inlineRadio2">En ORT. (Servicio ofrecido para los chicos de 7)</label>
+  <label class="form-check-label" for="inlineRadio2">Envío</label>
 </div>
 </div>
 <script type="text/javascript">$(document).ready(function() {
@@ -57,85 +57,7 @@
     });
 });</script>
     <div id="Retiro1" class="desc">
-        
-    </div>
-    <div id="Retiro2" class="desc" style="display: none;">
-        <div class="form-group">
-    <label for="exampleInputEmail1">Nombre y apellido del Chico</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa Nombre" >
-    <small id="emailHelp" class="form-text text-muted">Es para identificar a quien le entregaremos la comida</small>
-  </div>
-    </div>
-<h3>Pago</h3>
-
-	<div class="form-check form-check-inline">
-	  <input  checked="checked" class="form-check-input" type="radio" name="pago"  value="1">
-	  <label class="form-check-label" for="inlineRadio1">En efectivo</label>
-	</div>
-	<div class="form-check form-check-inline">
-	  <input   class="form-check-input" type="radio" name="pago" value="2">
-	  <label class="form-check-label" for="inlineRadio2">Mercado Pago</label>
-	</div>
-
- 	
-  -->
-                 <fieldset>
-                <!-- Address form -->
-
-                
-
-<?php 
-                if ($entrega == "envio") { ?>
-                
-                  <h2>Envio</h2>
-         
-                <!-- full-name input-->
-              
-                <!-- address-line1 input-->
-                <div class="form-group">
-                    <label class="form-group">Direccion</label>
-                    <div class="controls">
-                        <input id="address-line1" name="addressline1" type="text" placeholder="Direccion"
-                        class="form-control">
-                        <p class="help-block">Lugar donde quieren que le entreguen la comida</p>
-                    </div>
-                </div>
-                <!-- address-line2 input-->
-                
-                <!-- city input-->
-                <div class="form-group">
-                    <label class="control-label">Cuidad/ Municipio</label>
-                    <div class="controls">
-                        <input id="city" name="city" type="text" placeholder="Cuidad" class="form-control">
-                        <p class="help-block"></p>
-                    </div>
-                </div>
-               
-                
-                <!-- postal-code input-->
-                <div class="form-group">
-                    <label class="control-label">Codigo Postal</label>
-                    <div class="controls">
-                        <input id="postal" name="postal-code" type="text" placeholder="Codigo Postal"
-                        class="form-control">
-                        <p class="help-block"></p>
-                    </div>
-                </div>
-
-                
-                <?php
-                }
-
-
-
-                ?>
-
-        <h4>Horario:</h4>
-        <div class="form-group">
-                  <input id="address-line1" name="hora" type="time" placeholder="Direccion"
-                        class="form-control" required="true">
-                </div>
-  <h4>Reservar Mesa Para:</h4>
+        <h4>Reservar Mesa Para:</h4>
  <div class="form-group">
    
     <select name="mesa"  class="form-control" id="exampleFormControlSelect1">
@@ -158,6 +80,85 @@
     </select>
   </div>
 
+    </div>
+    <div id="Retiro2" class="desc" style="display: none;">
+              <div class="form-group">
+         
+                    <label class="form-group">Direccion</label>
+                    <div class="controls">
+                        <input id="address-line1" name="addressline1" type="text" placeholder="Direccion"
+                        class="form-control">
+                        <p class="help-block">Lugar donde quieren que le entreguen la comida</p>
+                    </div>
+
+                     
+                
+             
+                <!-- address-line2 input-->
+                
+                <!-- city input-->
+                <div class="form-group">
+                    <label class="control-label">Cuidad/ Municipio</label>
+                    <div class="controls">
+                        <input id="city" name="city" type="text" placeholder="Cuidad" class="form-control">
+                        <p class="help-block"></p>
+                    </div>
+                </div>
+               
+                
+                <!-- postal-code input-->
+                <div class="form-group">
+                    <label class="control-label">Codigo Postal</label>
+                    <div class="controls">
+                        <input id="postal" name="postal-code" type="text" placeholder="Codigo Postal"
+                        class="form-control">
+                        <p class="help-block"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+         
+                    <label class="form-group">Piso</label>
+                    <div class="controls">
+                        <input id=floor" name="floor" type="text" placeholder="Direccion"
+                        class="form-control">
+                        
+                    </div>
+                  </div>
+
+        </div>
+    </div>
+
+
+ 	
+  
+                 <fieldset>
+                <!-- Address form -->
+
+                
+
+<?php 
+                if ("hola" == "envio") { ?>
+                
+                  <h2>Envio</h2>
+         
+                <!-- full-name input-->
+              
+                <!-- address-line1 input-->
+                
+                
+                <?php
+                }
+
+
+
+                ?>
+
+        <h4>Horario:</h4>
+        <div class="form-group">
+                  <input id="address-line1" name="hora" type="time" placeholder="Direccion"
+                        class="form-control" required="true">
+                </div>
+  
     <div >
 <input value="Confirmar"  type="submit" class="btn btn-primary btn-lg"></input>
 

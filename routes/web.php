@@ -25,11 +25,12 @@ Route::delete('cart/{comida}','CartController@destroy')->name('cart.destroy');
 
 
 
-Route::post('/confirmacion','CheckoutController@store')->name('checkout.store');
+Route::post('/checkout','CheckoutController@store')->name('checkout.store');
+Route::get('/checkout','CheckoutController@index')->name('checkout.index')->middleware('auth');
+
 
 Route::get('/gracias','ConfirmacionController@index')->name('confirmacion.index');
-Route::get('/gracias','ConfirmacionController@index')->name('confirmacion.index');
-Route::post('/gracias','ConfirmacionController@store')->name('confirmacion.store')->middleware('auth');
+Route::post('/gracias','ConfirmacionController@store')->name('confirmacion.store');
 
 Route::post('/cupon','CuponsController@store')->name('cupon.store');
 Route::delete('/cupon','CuponsController@destroy')->name('cupon.destroy');

@@ -77,13 +77,14 @@ use Illuminate\Support\Facades\DB;
                 
 
                <div>
+                <div class="h-100">
                     @foreach ($comidas as $comida)
                     <a   data-toggle="modal" data-target="#{{ $comida->detalle }}">
 
                      
 <!-- Modal -->
                         <div class="card" style="float: left;">
-                          <img  width="150px" src="<?php echo imagenProducto($comida->imagen) ?>">
+                          <img height="120px"  width="160px" src="<?php echo imagenProducto($comida->imagen) ?>">
                             <div class="card-body">
                               <h5 class="card-title"> {{ $comida->nombre }} </h5>
                               <div class="btn btn-primary">${{ $comida->precio }}</div>
@@ -182,7 +183,7 @@ use Illuminate\Support\Facades\DB;
                     @endforeach
 
                 </div> <!-- end products -->
-
+</div>
                 <br>
                 <br>
                 <br>

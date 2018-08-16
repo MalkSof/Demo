@@ -8,7 +8,7 @@ function imagenProducto($path)
 	if (isset($path)) {
 		# code..
 
-		return  Voyager::image(   $path);
+		return  Voyager::image($path);
 	}
 	else
 	{
