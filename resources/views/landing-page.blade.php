@@ -16,56 +16,48 @@ use Illuminate\Support\Facades\DB;
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
      
-
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.css.map') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css.map') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-grid.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-grid.css.map') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-grid.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-grid.min.css.map') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-reebot.min.css.map') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-reebot.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-reebot.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-reebot.min.css.map') }}">
-        <link rel="stylesheet" href="{{ asset('sass/responsive.css') }}">
-
-        <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.js.map') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.min.js.map') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.js.map') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.min.js.min') }}"></script>
-
+        
 
 
 
     </head>
     <body>
 
-<script src="{{asset('components/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
 
-        
-            
-  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <link rel="stylesheet" href="{{ asset('sass/responsive.css') }}">
+
+
   @include('partials.nav')</a>
 
 
-            <div class="jumbotron">
-                <div >
-                  
-                    <h1>Aieka</h1>
-                    <p>Aieka pedidos es la nueva aplicación que te ayudara a que puedas reservar tu almuerzo, asi no te demoras</p>
-                    
-                </div> <!-- end hero-copy -->
-
-               <!-- end hero-image -->
-            </div> <!-- end hero -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100"  src="https://res.cloudinary.com/elem/image/upload/c_crop,h_557/v1534287974/desktopwallpapers.org.ua-7377_rjavvz.jpg" alt="First slide">
+       <div class="carousel-caption d-none d-md-block">
+      <h5>Sistema de Reserva de comida</h5>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100"   src="https://res.cloudinary.com/elem/image/upload/c_crop,h_398,w_1366/v1534288833/comida-rapida-casera_kd8o2h.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://res.cloudinary.com/elem/image/upload/c_crop,h_398,w_1366/v1534291221/recetas-de-comida-_C3_A1rabe-libanesa_nr20qb.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
         
 
         
@@ -85,13 +77,14 @@ use Illuminate\Support\Facades\DB;
                 
 
                <div>
+                <div class="h-100">
                     @foreach ($comidas as $comida)
                     <a   data-toggle="modal" data-target="#{{ $comida->detalle }}">
 
                      
 <!-- Modal -->
                         <div class="card" style="float: left;">
-                          <img  width="150px" src="<?php echo imagenProducto($comida->imagen) ?>">
+                          <img height="120px"  width="160px" src="<?php echo imagenProducto($comida->imagen) ?>">
                             <div class="card-body">
                               <h5 class="card-title"> {{ $comida->nombre }} </h5>
                               <div class="btn btn-primary">${{ $comida->precio }}</div>
@@ -190,7 +183,7 @@ use Illuminate\Support\Facades\DB;
                     @endforeach
 
                 </div> <!-- end products -->
-
+</div>
                 <br>
                 <br>
                 <br>

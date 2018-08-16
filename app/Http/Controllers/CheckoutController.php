@@ -40,15 +40,17 @@ class CheckoutController extends Controller
      */
     public function index()
     {
+        
         //
-        $descuento = session()->get('cupon')['descuento'] ?? 0;
+          $descuento = session()->get('cupon')['descuento'] ?? 0;
         $newtotal = (Cart::subtotal() - $descuento);
         return view('checkout')->with([
             'descuento' =>$descuento,
             'newtotal' => $newtotal,
-
+            
 
         ]);
+
     }
 
     /**
@@ -74,6 +76,15 @@ class CheckoutController extends Controller
             # code...
             return back()->withErrors('Perdon. No tenemos disponibilidad de algunas cosas que pedis');
         }
+        $id = Auth::id();
+       if ($request->retiro == 1) {
+           # code...
+        $ret = "Local";
+       }
+       else
+       {
+        $ret = "Domicilio";
+       }
 
         $fecha = session()->get('fecha');
            $horario = date('H:i', strtotime($request->hora));
@@ -89,7 +100,7 @@ class CheckoutController extends Controller
             'direccion' => $direccion,
             'cuidad' => $city,
             'postal' => $postal,
-            'entrega' => $request->entrega,
+            'entrega' => $ret,
             'hora' =>  $horario,
         ]);
         foreach (Cart::content() as  $item) {
@@ -115,7 +126,7 @@ class CheckoutController extends Controller
 
 
         }
-        Mail::send(new PedidoHecho($pedido));
+        
         $this->disminuirCantidad();
           Cart::destroy();
         session()->forget('cupon');
@@ -129,19 +140,10 @@ class CheckoutController extends Controller
      */
     public function envio(Request $request)
     { 
-        echo $request->entrega;
         
-         $descuento = session()->get('cupon')['descuento'] ?? 0;
-        $newtotal = (Cart::subtotal() - $descuento);
-        return view('checkout')->with([
-            'descuento' =>$descuento,
-            'newtotal' => $newtotal,
-            'entrega' => $request->entrega,
-
-
-        ]);
         
-        return view('gracias');
+        
+        
     }
 
     /**

@@ -57,19 +57,14 @@
 <a href="{{route('landing-page')}}" type="button" class="btn btn-primary">Continuar Comprando</a>
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <form action="{{route('checkout.envio')}}" method="post" >
-      <h1 class="display-4">{{Cart::total()}}</h1>
+    
       {{ csrf_field()}}
-      <div class="form-group">
-    <label for="exampleFormControlSelect1">Opciones de Entrega</label>
-    <select name="entrega" class="form-control" id="exampleFormControlSelect1">
-      <option value="local">Retiro en el local</option>
-      <option value="envio">Envio a domicilio</option>
-    </select>
-  </div>
+      <h1 class="display-4">{{Cart::total()}}</h1>
       
-      <button  type="submit" class="btn btn-primary btn-lg">Finalizar Compra</button>
-    </form>
+
+     
+     <a  href="{{ route('checkout.index') }}"  <button  type="submit" class="btn btn-primary btn-lg">Finalizar Compra</button></a>
+  
     
   </div>
 </div>

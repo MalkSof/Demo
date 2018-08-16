@@ -23,12 +23,13 @@ Route::post('/cart', 'CartController@store')->name('cart.store');
 Route::patch('/cart', 'CartController@update')->name('cart.update');
 Route::delete('cart/{comida}','CartController@destroy')->name('cart.destroy');
 
-Route::get('/checkout','CheckoutController@index')->name('checkout.index')->middleware('auth');
+
+
 Route::post('/checkout','CheckoutController@store')->name('checkout.store');
-Route::post('/checkout/envio','CheckoutController@envio')->name('checkout.envio');
+Route::get('/checkout','CheckoutController@index')->name('checkout.index')->middleware('auth');
+
 
 Route::get('/gracias','ConfirmacionController@index')->name('confirmacion.index');
-Route::post('/gracias','ConfirmacionController@index')->name('confirmacion.index');
 Route::post('/gracias','ConfirmacionController@store')->name('confirmacion.store');
 
 Route::post('/cupon','CuponsController@store')->name('cupon.store');
