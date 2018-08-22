@@ -4,6 +4,8 @@ use Mailgun\Mailgun;
 if ($_POST) {
 	# code...
 
+
+
 # Instantiate the client.
 $mgClient = new Mailgun('a1e11246ca5ad163925ed0a4f1439c13-a4502f89-807c5bb6');
 $domain = "sandbox1991ea818a384b2fbf1f0eef677a408e.mailgun.org";
@@ -12,8 +14,12 @@ $domain = "sandbox1991ea818a384b2fbf1f0eef677a408e.mailgun.org";
 $result = $mgClient->sendMessage("$domain",
           array('from'    => 'Mailgun Sandbox <postmaster@sandbox1991ea818a384b2fbf1f0eef677a408e.mailgun.org>',
                 'to'      => 'Nicolas Zalcman <grupomalkasoft@gmail.com>',
-                'subject' => 'Nikito Zalcman',
-                'text'    => 'Crack'));
+                'subject' => 'Contacto Malkasoft',
+                'text'    => 'Nombre: '. $_POST['name'].'
+                Email: '. $_POST['email']. '
+                Mensaje: ' . $_POST['message'] ));
+
+                
 }
 ?>
 
