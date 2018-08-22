@@ -1,3 +1,23 @@
+<?php
+require_once('vendor/autoload.php');
+use Mailgun\Mailgun;
+if ($_POST) {
+	# code...
+
+# Instantiate the client.
+$mgClient = new Mailgun('a1e11246ca5ad163925ed0a4f1439c13-a4502f89-807c5bb6');
+$domain = "sandbox1991ea818a384b2fbf1f0eef677a408e.mailgun.org";
+
+# Make the call to the client.
+$result = $mgClient->sendMessage("$domain",
+          array('from'    => 'Mailgun Sandbox <postmaster@sandbox1991ea818a384b2fbf1f0eef677a408e.mailgun.org>',
+                'to'      => 'Nicolas Zalcman <grupomalkasoft@gmail.com>',
+                'subject' => 'Nikito Zalcman',
+                'text'    => 'Crack'));
+}
+?>
+
+
 <!DOCTYPE HTML>
 <!--
 	Big Picture by HTML5 UP
@@ -105,7 +125,7 @@
 						<p>Estamos las 24hs a su dispocision</p>
 					</header>
 					<div class="box">
-						<form method="post" action="#">
+						<form method="post" action="">
 							<div class="fields">
 								<div class="field half"><input type="text" name="name" placeholder="Nombre" /></div>
 								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
@@ -125,7 +145,7 @@
 				<!-- Icons -->
 					<ul class="icons">
 						
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.facebook.com/malkasoft1" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 						
 					</ul>
