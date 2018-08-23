@@ -81,11 +81,9 @@ $result = $mgClient->sendMessage("$domain",
 				</div>
 				<a href="#two" class="button style2 down anchored">Next</a>
 			</section>
-
 		<!-- Two -->
 			<section id="two" class="main style2 left dark fullscreen">
 				<div class="content box style2">
-					
 					<iframe width="100%" height="315" src="https://www.youtube.com/embed/4EfTFuuO3ow?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 				<a href="#work" class="button style2 down anchored">Next</a>
