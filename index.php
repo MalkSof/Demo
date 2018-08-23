@@ -59,7 +59,7 @@ $result = $mgClient->sendMessage("$domain",
 			<section id="intro" class="main style1 dark fullscreen">
 				<div class="content">
 					<header>
-						<img width="150px" src="images/Lan.png">
+						<img width="150px" src="images/lan.png">
 						<h2>MalkaSoft</h2>
 					</header>
 					<p>Desarrolamos e-commerce para comercios y restaurantes <br />
@@ -86,7 +86,7 @@ $result = $mgClient->sendMessage("$domain",
 			<section id="two" class="main style2 left dark fullscreen">
 				<div class="content box style2">
 					
-					<iframe width="450" height="315" src="https://www.youtube.com/embed/4EfTFuuO3ow?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<iframe width="100%" height="315" src="https://www.youtube.com/embed/4EfTFuuO3ow?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 				<a href="#work" class="button style2 down anchored">Next</a>
 			</section>
