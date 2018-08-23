@@ -38,6 +38,16 @@ $result = $mgClient->sendMessage("$domain",
 		<meta name="google-site-verification" content="m9IBdyVTfvsAYmEnhCqjxXazDwMVs-wQWAHmyeMG4IM" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110954624-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110954624-6');
+</script>
+
 	</head>
 	<body class="is-preload">
 
@@ -59,7 +69,7 @@ $result = $mgClient->sendMessage("$domain",
 			<section id="intro" class="main style1 dark fullscreen">
 				<div class="content">
 					<header>
-						<img width="150px" src="images/Lan.png">
+						<img width="150px" src="images/lan.png">
 						<h2>MalkaSoft</h2>
 					</header>
 					<p>Desarrolamos e-commerce para comercios y restaurantes <br />
@@ -81,12 +91,10 @@ $result = $mgClient->sendMessage("$domain",
 				</div>
 				<a href="#two" class="button style2 down anchored">Next</a>
 			</section>
-
 		<!-- Two -->
 			<section id="two" class="main style2 left dark fullscreen">
 				<div class="content box style2">
-					
-					<iframe width="450" height="315" src="https://www.youtube.com/embed/4EfTFuuO3ow?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<iframe width="100%" height="315" src="https://www.youtube.com/embed/4EfTFuuO3ow?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 				<a href="#work" class="button style2 down anchored">Next</a>
 			</section>
