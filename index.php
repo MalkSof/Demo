@@ -38,6 +38,16 @@ $result = $mgClient->sendMessage("$domain",
 		<meta name="google-site-verification" content="m9IBdyVTfvsAYmEnhCqjxXazDwMVs-wQWAHmyeMG4IM" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110954624-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110954624-6');
+</script>
+
 	</head>
 	<body class="is-preload">
 
