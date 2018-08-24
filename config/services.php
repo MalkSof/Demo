@@ -35,9 +35,9 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
     'google' => [
-        'client_id' => '448201046928-63hv02mhbnrurl9nauq7t9b4vs7i1sab.apps.googleusercontent.com',        // Your GitHub Client ID
-        'client_secret' => 'jZcMLuEyoUga1SbQTTtBQYSD', // Your GitHub Client Secret
-        'redirect' => 'http://yatay.aieka.com.ar/login/google/callback',
+        'client_id' => '473469756140-pp6l1tag42d3dacfegdao6tgs9kcda2k.apps.googleusercontent.com',        // Your GitHub Client ID
+        'client_secret' => 'I-bTstwxc6YRlEwQhx4wRBYG', // Your GitHub Client Secret
+        'redirect' => 'http://demo.malkasoft.xyz/login/google/callback',
     ],
 
 ];
