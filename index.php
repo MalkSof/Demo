@@ -51,6 +51,10 @@ $result = $mgClient->sendMessage("$domain",
 
 	</head>
 	<body class="is-preload">
+
+
+
+		
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
