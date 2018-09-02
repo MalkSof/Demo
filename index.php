@@ -47,10 +47,32 @@ $result = $mgClient->sendMessage("$domain",
 
   gtag('config', 'UA-110954624-6');
 </script>
+<!-- Load Facebook SDK for JavaScript -->
 
 	</head>
 	<body class="is-preload">
 
+
+
+		
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="460652227771197"
+  theme_color="#ffc300"
+  logged_in_greeting="Hola. En que te puedo ayudar?"
+  logged_out_greeting="Hola. En que te puedo ayudar?">
+</div>
 		<!-- Header -->
 			<header id="header">
 				<h1>MalkaSoft</h1>
@@ -64,9 +86,10 @@ $result = $mgClient->sendMessage("$domain",
 					</ul>
 				</nav>
 			</header>
-
+			
 		<!-- Intro -->
 			<section id="intro" class="main style1 dark fullscreen">
+
 				<div class="content">
 					<header>
 						<img width="150px" src="images/lan.png">
